@@ -1,0 +1,43 @@
+Sliding Window Algorithm - In this Algorithm we will create a window(imagine a window or a container) which contains 
+a particular set of data to be calculated and we will move on further one step and also removing one step from the window(container).
+This way we can avoid repetative calculation.
+
+For example, consider this number array.
+[7,2,8,1,6,5,3,4]
+
+task find the subarray of length 3 such that sum is maximum.
+
+normal bruteforce method will be like.
+
+i=0;
+7+2+8 = 17
+i=1;
+2+8+1 = 11 (2+8 is already calculated previously)
+i=2;
+8+1+6 = 15 (8+1 is already calculated previously)
+
+this way there is a repetative calculation of the indexes.
+
+So using the Sliding window to make things better
+
+i=0;
+7+2+8 = 17
+next i;
+17-7+1 = 11(subtracting left most index and adding right index from the previous sum)
+next i;
+11-2+6 = 15(subtracting next leftmost index and adding next right index from the previous sum)
+
+so this way we can avoid repeatative calculation.
+
+HOW TO FIND THE PROBLEM BELONGS TO THIS Algorithm ?
+
+if we are about to find contigous sub elements in an array or string.
+longest, maximum, minimum, shortest find.
+
+These kinda things will be present around this algo.
+
+THREE TYPES OF SLIDING WINDOW.
+
+1.window of static size
+2.window of dynamic size(varyin size)
+3.window of dynamic size as well as using auxillary data structures like Map or Set.

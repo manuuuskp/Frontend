@@ -1,0 +1,12 @@
+Two pointers - as the name indicates, will have two pointers to perform the required task.
+
+It will be better if the Array/String/LinkedList be sorted(O(n logn)).
+if it is already sorted then this algorithm can perform in O(n).
+
+It is of two types:
+Equi Directional - two pointers, one moves fast and the other moves slow - which also resembles Sliding Window Pattern.
+Opposite Directional - two pointers starts from left and right end and moves towards each other.
+
+example - find the sum of two numbers such that it equals k.
+
+this is an opposite directional pointer algorithm.(note: for this sum, arr should be sorted)
