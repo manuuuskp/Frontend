@@ -1,0 +1,28 @@
+What is Redux ?
+    Redux is a state management library which can be used for javascript.
+It is not only used for React.
+Redux has a single store and all the states are maintained in that single store.
+
+Workflow of Redux :
+    Redux comprises of three parts.
+    1.Store
+    2.Reducer
+    3.Action
+
+Store - Store has all the states present inside of it.
+Reducer - Reducer is the function which will modify the state values in the store.
+Action - Dipatching an Action triggers the Reducer function to execute.
+
+Action --dispatched---> triggers Appropriate Reducer Function ----> changes the state in the store ---> reloads component
+
+Link with React :
+Redux works outside of the React which means Store will be maintained outside of the react hierarchy.
+The Store can then be passed as a prop for Provider Component which provides state across all its children.
+
+npm commands:
+    npm i redux
+    npm i react-redux
+
+    Advanced release of the Redux is the redux toolkit which eliminates many boiler plate code.
+
+    npm i @reduxjs/toolkit
