@@ -12,3 +12,5 @@ Array.prototype.customFilter = function (callback) {
   }
   return response;
 };
+
+console.log([1, 2, 3, 4].customFilter((x) => x > 2)); //[3,4]
