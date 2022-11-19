@@ -1,0 +1,15 @@
+React hooks
+Formik
+Error boundary
+useQuery
+profiler
+react portals
+
+Design patterns :
+HOC
+Render props pattern - Done
+Container Components
+Compound Components
+Conditional Rendering
+Provider pattern
+React hooks pattern
