@@ -18,7 +18,7 @@ newGetNameFunc2(); // returns manoj as this object will be
 
 Function.prototype.customBind = function (thisObj) {
   thisObj.fnRef = this;
-  return function () {
-    return thisObj.fnRef();
+  return function (...args) {
+    return thisObj.fnRef(...args);
   };
 };

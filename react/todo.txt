@@ -1,12 +1,14 @@
 React hooks
-Formik
-Error boundary
+Formik - Done
+Error boundary - Done
 useQuery
-profiler
+profiler - Done
 react portals
+React lazy
+React suspense
 
 Design patterns :
-HOC
+HOC - Done
 Render props pattern - Done
 Container Components
 Compound Components

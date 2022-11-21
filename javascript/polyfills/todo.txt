@@ -17,8 +17,8 @@ Prototype - DONE
 7. Implement the Array.forEach method on the Array
 Prototype - DONE
 
-8. Implement the Function.bind method on the
-Function Prototype
+8. Implement the Function.bind, call, apply method on the
+Function Prototype - DONE
 
 9. Implement Async.parallel, which executes a set of
 async tasks parallelly
