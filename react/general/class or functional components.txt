@@ -1,0 +1,61 @@
+Which one is better ?
+class or functional components ?
+
+There is nothing much difference between the class and functional component.
+As far as I have read there is not much difference in performance between those two however developers feel 
+the use of functional components be little easier.
+
+There are few lifecycle methods that are not supported in functional components.
+If those lifecycle methods are to be utilised to its fullest potential then using class component is wise.
+other wise sticking to the functional component is better and it will be easy to maintain as well when new developers
+look into the code and work on it.
+
+Lifecycle methods :
+Mounting phase :-
+constructor
+static getDerivedStateFromProps(props, state)
+render
+componentDidMount
+
+Updating phase :-
+getDerivedStateFromProps
+shouldComponentUpdate
+render
+getSnapshotBeforeUpdate(prevProps, prevState) - do anything before change in the real DOM.
+componentDidUpdate
+
+Unmounting phase :-
+componentWillUnmount
+
+The equivalent in Functional Component:
+
+getDerivedStateFromProps
+useState(() => {
+    return somethn_based_on_props
+})
+
+useEffect(() => {
+    //componentDidMount
+}, [])
+
+useEffect(() => {
+    //componentDidMount, componentDidUpdate
+}, [number])
+
+useEffect(() => {
+    return () => {
+        //componentWillUnmount
+    }
+},[])
+
+shouldComponentUpdate, getSnapshotBeforeUpdate, getDerivedStateFromError, ComponentDidCatch
+There is no equivalent in functional component for these methods.
+
+
+
+Difference between state and props.
+
+The state of a component is an object that holds information that changes the behaviour of the component.
+
+The main difference between state and props is that props doesnt changes over a period of time during the lifetime of 
+the component.

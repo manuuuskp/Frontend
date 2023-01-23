@@ -1,0 +1,15 @@
+attributes to style the list.
+
+for ul :
+list-style-type: disc | square | none
+
+for ol :
+list-style-type: decimal | decimal-leading-zero | upper-alpha | lower-alpha
+
+list-style-position : outside | inside
+
+list-style-image :
+
+background-image:
+
+display : inline | inline-block

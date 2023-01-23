@@ -1,0 +1,175 @@
+Types of Test:
+---------------
+Unit Test
+Integration Test
+E2E test
+
+Unit Test - to test each individual block like each components and each functions and classes.
+Integration Test - to test integration between the units.
+E2E - to test the whole of the application including real UI, real database, real server.
+
+Filtering a Test
+----------------------
+test.skip() - skips from getting tested
+test.only() - runs only that test.
+
+describe.skip()
+describe.only()
+
+Filename conventions
+-----------------------
+filenames with -
+filename.test.js
+filename.spec.js
+
+files in __test__ folder
+
+Code Coverage
+-------------------------
+Code coverage is a metric to test how much of our application is tested.
+statement coverage - how many statements were covered.
+branches coverage - how many branches like if/else were covered.
+function coverage - how many functions that are defined were covered.
+line coverage - how many lines of code are covered.
+
+to run coverage - need to configure.
+
+"coverage": "npm test -- --coverage --watchAll --collectCoverageFrom='src/component/**/*.{js,jsx}'"
+
+"jest": {
+    "coverageThreshold": {
+        "global": {
+            "branches" : 80,
+            "statements": -10,
+            "lines": 80,
+            "functions": 80
+        }
+    }
+}
+
+Queries provided by RTL.
+
+getBy - get the element. throws error if the element node is not present.
+queryBy - gets the element. returns null if the element node is not preset.
+        This way we can check if the element is conditionally rendered.
+findBy - returns a promise which will be resolved after 1000ms by default.
+
+
+there are quite a few methods in all the queries.
+
+getByRole()
+getByLabelText()
+getByPlaceholderText()
+getByDisplayValue()
+getByText()
+getByAltText()
+getByTitle()
+getByTestId()
+
+getByText:
+------------
+TextMatch type.
+we can have a function inside getByText() where we can get content and element as arguments.
+
+screen.getByText((content) => content.startsWith("string"))
+
+Manual Queries:
+---------------
+Manual queries are also possible but querhing by id, class are not possible.
+it is highly recommended not to use manual queries.
+
+Debugging:
+--------------
+screen.debug()
+logRoles(view.container) // const view = render(<SomeApp />);
+
+
+User Events
+--------------
+
+Inorder to trigger events we can use fireevent or user-events.
+fireEvent is smaller compared to user-events.
+fireEvent will only provide a concrete event whereas userevents will provide indepth events.
+for example - on text input change -- this happens --> user focuses in text input, types something.
+blah blah blah,,, but fireevents only provide the concrete event.
+
+it is better to use user-events.
+
+user.setup()
+user.click()
+user.type()
+user.tab()
+user.selectOptions()
+user.upload()
+user.copy()
+user.cut()
+user.paste()
+user.keyboard()
+
+all user events are asynchronous.
+so need to check with async and await.
+
+convenience API, Utility API, Clipboard API.
+pointer API, Keyboard API should be looked into for futher events.
+
+Providers:
+-------------
+render(<COmponent />, {
+    wrapper: WrapperComponent
+})
+
+Test Custom React Hooks:
+---------------------------
+
+will not depend on render or screen methods.
+will depend on renderHooks
+
+const {result} = renderHooks(hookname)
+expect(result.current.count).toBe(something);
+
+to setInitial props:
+const {result} = renderHooks(hookname, {
+    initialProps: {
+        initialValue: 10
+    }
+})
+
+import { renderHook } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
+import { useCounter } from "./useCounter";
+
+describe("useCounter", () => {
+  test("initial count", () => {
+    const { result } = renderHook(useCounter);
+    expect(result.current.count).toBe(0);
+  });
+
+  test("initial count through props", () => {
+    // initialprops can be set as second argument
+    const { result } = renderHook(useCounter, {
+      initialProps: 1,
+    });
+    expect(result.current.count).toBe(1);
+  });
+
+  test("increment counter", () => {
+    const { result } = renderHook(useCounter);
+    //state update should be wrapped in act
+    act(() => result.current.increment());
+    expect(result.current.count).toBe(1);
+  });
+});
+
+Mocking a function
+--------------------------
+Testing a function is like need to check whether that method is called or not.
+not to check what that function does.
+
+to do that, we have to create a mock function.
+const increment = jest.fn()
+
+await user.click(screen.getByRole("button, {name: "increment}))
+
+expect(increment).toHaveBeenCalled(1);
+
+

@@ -1,0 +1,15 @@
+How is React better compared to its peers.
+
+Comparing with most popular libraries, Angular and Vue.
+
+Comparing with Angular:
+ Angular is a framework and so the size of the bundle is larger when compared with react.
+ So React is faster than Angular.
+
+ React uses VirtualDOM when compared with Angular which uses RealDOM and so React's performance
+ is comparatively higher compared to Angular.
+
+Comparing with Vue:
+ React when compared with Vue has slightly heavier base bundle size.
+ but on the other hand React has the largest community and that makes it easier to resolve problems or
+ most of the problems have already been resolved.

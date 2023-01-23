@@ -1,0 +1,47 @@
+Lifecycle methods are important in React as the mounting, updating and unmounting of the component
+follows certain method order.
+
+There are three phases in the component lifecycle.
+
+Mounting,
+Updating,
+UnMounting,
+
+There is a subtle difference in the methods of lifecycle for Class and Functional Components.
+
+Class Component Lifecycle :
+
+Mounting phase :
+    1.constructor
+    2.getDerivedStateFromProps
+    3.render
+    4.componentDidMount
+
+Updating phase :
+    1.getDerivedStateFromProps
+    2.shouldComponentUpdate
+    3.render
+    4.getSnapshotBeforeUpdate
+    5.componentDidUpdate
+
+UnMounting phase :
+    1.componentWillUnmount
+
+
+For Functional Component :
+
+everthing can be achieved using useEffect() Hook
+
+useEffect(() => {
+
+    return () => {
+
+    }
+}, []);
+
+useEffect will called initially - componentDidMount.
+
+if something is given in the dependency array and if that value gets modified,
+component will rerender - componentDidUpdate.
+
+return function to recreate - componentWillUnmount.

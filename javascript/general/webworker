@@ -1,0 +1,30 @@
+Javascript is a single threaded language.
+
+so if some complex things to happen then it might block the rest of the code.
+
+To make javascript multithreaded we can create a webworker.
+This webworker will run the different thread in the main thread.
+
+webworkers will not have access to the DOM object.
+However it has access to navigator object, location object, XMLHttpRequest, Storage API.
+
+Inorder to create a Webworker we can use its constructor.
+const myworker = new Worker("worker file location");
+
+both our js file and worker file will interact via postMessage() method and onMessage = () => {} callback.
+
+This postMessage(sendSomeData) will send the data and the onMessage will receive the event object which as data property.
+
+onMessage = (e) => {
+console.log(e.data);
+}
+
+Errors in workers can be read by onError callback.
+
+onError = (e) => {
+
+}
+
+Workers can again create a shareworkers or subworkers to perform more tasks.
+
+const sharedWorker = new SharedWorker(shared worker location);

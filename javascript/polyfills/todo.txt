@@ -38,3 +38,6 @@ when an item is pushed into the array
 
 15. Implement a class/function/utility which exhibits
 an event dispatcher mechanism
+
+
+16. Function Currying

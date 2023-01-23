@@ -1,0 +1,21 @@
+When an user enters the URL and then hits enter - what happens ?
+All our webpages are stored somewhere in the server.
+Inorder to take the appropriate content out of that server it is to be hit with correct ip address.
+
+so when an user enters the URL and click search, the browser firsts go for the DNS(Domain Name Space) server
+and looks for the Domain's IP address. It then requests the server for that IP address.
+
+The server then returns the response.
+
+How HTML is painted ?
+As soon as the server returns the response, the HTML forms the render tree.
+
+Normally the HTML is the DOM - Document Object Model and
+CSS is the CSSOM - CSS Object Model.
+
+Together they combine and forms the Render Tree.
+
+Then the render tree goes through a layout step where it will decide which components to be placed
+in which position of the layout.
+
+then the HTML is rasterized. i.e painted.

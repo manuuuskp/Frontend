@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast popup</title>
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="maincontainer">
+      <div>
+        <select class="selectbox horizontalPosition">
+          <option value="left" default>Left</option>
+          <option value="right">Right</option>
+        </select>
+      </div>
+      <div>
+        <select class="selectbox verticalPosition">
+          <option value="top" default>Top</option>
+          <option value="bottom">Bottom</option>
+        </select>
+      </div>
+      <div>
+        <select class="selectbox toastType">
+          <option value="success" default>Success</option>
+          <option value="error">Error</option>
+          <option value="warning">Warning</option>
+          <option value="info">Info</option>
+        </select>
+      </div>
+      <div>
+        <label for="durationInput">Duration</label>
+        <input
+          id="durationInput"
+          class="duration"
+          type="range"
+          min="3"
+          max="10"
+        />
+      </div>
+      <div>
+        <input type="text" class="toasterContentInput" />
+      </div>
+      <div>
+        <button class="showToaster">Show Toaster</button>
+      </div>
+      <div class="toasterContainer"></div>
+      <template>
+        <div class="toasterItem">
+          <span class="toasterContent">Message saved successfully</span>
+          <span class="toasterContent--close">X</span>
+        </div>
+      </template>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

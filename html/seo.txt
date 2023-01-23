@@ -1,0 +1,30 @@
+What is SEO ?
+SEO abbreviated as Seach Engine Optimisation is the process which we follow to increase the 
+quality and quantity of the network request for our sites.
+
+How does it work ?
+normally Search Engines will bring the result based on "relevance" and "popularity".
+
+Steps done by Search Engine :
+crawled
+indexed 
+ranked
+
+There are two methods to improve the SEO.
+1.on search Optimisation.
+2.off search Optimisation.
+
+off search is not in the hands of the developer of the website. It depends on the external marketing.
+
+on search is completely depends on how the Website is developed.
+
+Things to notice when developing a website considering SEO.
+
+1.Title tag - this appears on the tab and also whenever the search results are printed.
+2.Meta description - this is the description that is displayed as a search result.
+3.Using proper header tags - this makes the search engine to highlight the important keyword.
+4.Using alt tags in images - this will also makes the search engines to get appropriate results.
+5.Use Links whenever appropriate.
+6.Use Semantic tags.
+
+Rest depends on the content and its keywords present.

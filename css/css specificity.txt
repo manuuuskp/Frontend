@@ -1,0 +1,16 @@
+understanding specificity is important.
+specifity determines which style will be applied to which element.
+
+!important - takes more specificity than all.
+
+inherited - takes the lowest precendence as the style is applied to its parent not to it.
+* - universal selector takes the lowest precendence.
+element - higher specificity than universal and inherited.
+attribute - higher than element.
+class - higher than attribute.
+id - higher than class.
+
+combined selectors - takes specificity combined.
+<style><style> - takes specificity higher than css stylesheets if same css selector is used.
+style="" directly in html - takes more precedence of all.
+

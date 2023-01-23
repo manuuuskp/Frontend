@@ -1,0 +1,20 @@
+.row {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #000;
+    border-bottom: 0px;
+    display: flex;
+  }
+  
+  .row:last-child {
+    border-bottom: 1px solid #000;
+  }
+  
+  .col {
+    width: 100px;
+  }
+  
+  .col:not(:last-child) {
+    border-right: 1px solid #000;
+  }
+  

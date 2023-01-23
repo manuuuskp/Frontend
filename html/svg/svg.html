@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg width="500px" height="500px">
+      <!-- line is just a connection between two end points.
+        It has x1, y1, x2, y2 points to define their endpoints and stroke draws the line between endpoints. -->
+      <line x1="100" y1="200" x2="300" y2="200" stroke="red"></line>
+
+      <!-- Rectangle can be drawn using height and width and also telling the point where to start i.e x and y.
+      rect tag can also be used to draw square. -->
+      <rect
+        x="100"
+        y="200"
+        width="100"
+        height="100"
+        stroke="red"
+        fill="yellow"
+      ></rect>
+
+      <!-- Circle is used to draw circle. cx, cy (centre X and centre Y) can be given to specify the centre of circle.
+      r - radius used to define the radius of the circle. -->
+      <circle cx="100" cy="100" r="50" stroke="red" fill="yellow"></circle>
+
+      <!-- Ellipse is same as Circle but will have rx and ry. i.e two radius inorder to achieve ellipse. -->
+      <ellipse
+        cx="100"
+        cy="100"
+        rx="50"
+        ry="100"
+        fill="yellow"
+        stroke="red"
+      ></ellipse>
+
+      <!-- text will have only x and y to define the position and any child given as text will be displayed 
+      in the page. -->
+      <text x="100" y="200">Any text</text>
+
+      <!-- polyline is used to draw multiple lines. it is given as points.
+        points will have x,y x,y x,y ... etc and polyline will draw following that line. -->
+      <polyline
+        points="10,20 25,50 100,180"
+        fill="none"
+        stroke="red"
+      ></polyline>
+
+      <!-- polygon is used to draw shape using multiple lines. it is given as points.
+        points will have x,y x,y x,y ... etc and polygon will draw a shape following that line. -->
+      <polygon points="10,20 25,50 100,180" fill="none" stroke="red"></polygon>
+
+      <!-- path is quite complex one which has multiple shapes to be drawn.
+      M - move to
+      L - Line to
+      H - horizontal line
+      V - vertical line
+      C - Curve to (cx1,cy1 cx2,cy2 cx,cy)
+      S - Smooth curve - joins earlier value (cx2,cy2 cx,cy)
+      Q - Quadratic curve (cx1,cy1 cx,cy)
+      T - Same as smooth but for quadratic 
+      Z - indicates end point and connects first and last point. -->
+      <path
+        d="M250,20 L250,50 H400,150 V170,200 C100,50 70,100 150,25 S10,35 Q45,60 75,85 T90,150 45,45 Z"
+      ></path>
+    </svg>
+  </body>
+</html>

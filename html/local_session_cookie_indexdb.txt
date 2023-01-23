@@ -1,0 +1,40 @@
+Storage API.
+
+As far as storage API is concerned in the browser we have local storage, session storage, cookie and indexDB.
+
+local Storage :
+local storage is one of the storages provided by the storage API of the browser.
+
+the data stored in local storage is persistent. i.e - it will be stored untill it is cleared.
+there is no expiration time.
+Data stored in the local storage is always of string type. so whenever we get item from local 
+storage it should be parsed.
+
+methods in local storage :
+localStorage.setItem(key, value);
+localStorage.getItem(key);
+localStorage.removeItem(key);
+localStorage.clear();
+
+session Storage :
+session storage is same as local storage but the only difference is that
+the data is not persistent.
+once the tab is closed then the session values will be cleared automatically.
+
+sessionStorage.setItem(key, value);
+sessionStorage.getItem(key);
+sessionStorage.removeItem(key);
+sessionStorage.clear();
+
+Whenever a new tab is created then the new session will be created.
+whenever a tab is duplicated then the session will also be copied.
+even if same url is loaded in different tab different sessions will be created for each tab.
+
+Cookies :
+Cookies are small text pieces which will be sent by the webserver to the web browsers.
+so whenever we visit the same webpage then the webserver makes use of the cookies to
+throw advertisement.
+to improve their webpage. etc.,
+
+document.cookie="cookiename:value; SameSite:none; Secure";
+console.log(document.cookie) will print the cookies.

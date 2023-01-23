@@ -1,0 +1,23 @@
+Error Handling in any application is so important that it will not break the application and makes the user 
+feel bad about the application.
+
+We can handle error by creating the errorboundary class component.
+but the main drawback of that is it cannot handle event listener error or asynchronous operations error.
+So to overcome it we can use the library called react-error-boundary.
+
+import {ErrorBoundary} from "react-error-boundary";
+
+Wrap this component around the component that is expected to throw error.
+
+<ErrorBoundary fallback={<FallbackComponent />} onError={onErrorHandler}/>
+
+onErrorHandler = (error, errorinfo) => {}
+onErrorHandler is equivalent to componentDidCatch where we can log errors to the logbook.
+
+This will also handle only the rendering error not the event listener error or the async error.
+
+To catch that error we need to use useErrorhandler hook from react-error-boundary.
+
+const handleError = useErrorHandler()
+
+handleError(err) to fix the errors gracefully. This will load the fallback component.

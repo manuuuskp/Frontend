@@ -1,0 +1,75 @@
+.maincontainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.maincontainer > div {
+    margin: 10px;
+}
+
+.selectbox {
+    height: 30px;
+}
+
+.showToaster {
+    height: 30px;
+    background-color: crimson;
+    color: white;
+}
+
+.toasterContent {
+    width: 300px;
+    height: 30px;
+}
+
+.toasterContentInput {
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+}
+
+.toasterItem {
+    width: 200px;
+    background-color: rgb(36, 153, 249);
+    color: white;
+    padding: 10px;
+    border-radius: 7px;
+    margin-block: 10px;
+    display: flex;
+    column-gap: 5px;
+}
+
+.toasterItem.success {
+    background-color: green;
+}
+.toasterItem.error {
+    background-color: red;
+}
+.toasterItem.warning {
+    background-color: orange;
+}
+.toasterItem.info {
+    background-color: rgb(101, 180, 245);
+}
+
+.toasterContainer {
+    position: fixed;
+}
+
+.toasterContainer.left {
+    left: 20px;
+}
+
+.toasterContainer.bottom {
+    bottom: 20px;
+}
+
+.toasterContainer.top {
+    top: 20px;
+}
+
+.toasterContainer.right {
+    right: 20px;
+}

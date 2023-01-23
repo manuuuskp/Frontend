@@ -1,0 +1,18 @@
+CSS units can be categorized intow three types.
+
+1.absolute
+2.relative
+3.viewport
+
+1.absolute - is of fixed size.
+example - px, cm, in etc.
+
+2.relative  - relative to something.
+example:
+em - relative to the parent element.
+rem - relative to the root element.
+%
+
+3.viewport - relative but relative to the viewport
+vw - % of viewport width.
+vh - % of viewport height.

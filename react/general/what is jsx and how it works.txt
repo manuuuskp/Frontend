@@ -1,0 +1,19 @@
+What is JSX ?
+JSX is a Javascript extension which uses HTML tags to create React Components inside JS.
+
+Purpose of JSX ?
+We can create React components using React.createElement(tagname, attrsObj, childElement);
+But this will make the maintainability and code readability harder and so React has come up with JSX syntax.
+This is much simpler and cleaner than React.createElement.
+
+How does JSX renders in Browser ?
+Browsers do not understand JSX.
+So JSX needs to transpiled to javascript so that Browser will understand the language.
+Inorder to transpile BABEL is used.
+
+How to create JSX equivalent to React.createElement ?
+1.First Tags should be opened.
+2.Set props as attributes.
+3.Pass the child between the tags.
+
+Javascript expression should be wrapped in a curly braces.

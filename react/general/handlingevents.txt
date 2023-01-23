@@ -1,0 +1,3 @@
+In React Handling events is so easy.
+1.Need to use Camel Case instead of lowercase as in vanilla javascript.
+2.In JSX functions can be passed directly instead of string.

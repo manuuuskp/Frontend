@@ -1,0 +1,14 @@
+some of the common properties to be set to style the text.
+
+font-family - seriff, sans-seriff, Arial, helvetica etc
+font-size
+color
+font-weight
+text-transform: uppercase | lowercase | capitalize
+font-variant - normal | small-caps (render smaller case characters as small capital letters).
+text-decoration: underline | overline | none
+letter-spacing
+line-height
+text-align
+text-indent
+text-shadow

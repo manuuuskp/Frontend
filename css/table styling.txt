@@ -1,0 +1,11 @@
+styling for the table
+
+width,
+height,
+margin,
+border,
+padding on table cells,
+text-align,
+vertical-align : top | middle | bottom
+border-spacing - space between borders
+border-collapse : seperate | collapse

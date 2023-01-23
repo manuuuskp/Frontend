@@ -1,0 +1,140 @@
+/* universal selector */
+* {
+
+}
+
+/* class selector */
+.classname {
+
+}
+
+/* id selector */
+#id {
+
+}
+
+/* attribute selector */
+[href] {
+
+}
+
+/* attribute matching selector */
+[href="www.example.com"] {
+
+}
+
+/* attribute starts with */
+[href^="www"] {
+
+}
+
+/* attribute ends with */
+[href$=".com"] {
+
+}
+
+/* attribute contains */
+[href*="example"] {
+
+}
+
+/* attribute equals word */
+[href="word"] {
+
+}
+
+
+/* element selector */
+div {
+
+}
+
+/* element combined with attribute */
+input[type="checkbox"] {
+
+}
+
+/* element grouping */
+li, p {
+
+}
+
+/* immediate child of type */
+li > p {
+
+}
+
+/* all descendants */
+li p {
+
+}
+
+/* adjacent sibling of li */
+li + p {
+
+}
+
+/* general siblings */
+li ~ p {
+
+}
+
+/* pseudo classes - state of the element*/
+li:active,
+li:hover,
+li:visited,
+li:link {
+
+}
+
+p:first-child,
+p:last-child {
+
+}
+
+/* selects 2nd p tag of its parent */
+p:nth-child(2) {
+
+}
+
+/* selects every 2nd child of p of its parent */
+p:nth-child(2n) {
+    
+}
+
+/* selects first and last p element of its parent */
+p:first-of-type,
+p:last-of-type {
+
+}
+
+/* selects  the p element that is not last child of its parent */
+p:not(:last-child) {
+
+}
+
+/* selects all the checked checkboxes */
+input[type="checked"]:checked {
+
+}
+
+/* pseudo elements - part of the element */
+p::first-letter {
+
+}
+
+/* selcts the first line */
+p::first-line {
+
+}
+
+/* selects virtual start and end of the element  */
+p::before, p::after {
+
+}
+
+/* provides style when paragraph is selected */
+p::selection {
+
+}
+

@@ -1,0 +1,11 @@
+React follows one way data binding.
+
+What is data binding ??
+
+Data binding is a process of connecting the UI elements with the data that is used to populate the UI elements.
+
+In React one way data binding principle is used.
+i.e Data flows from parent element to the child not the other way around.
+
+Inorder to achieve data passing from child to parent, external state management should be used.
+or the only other way it to lift the state up.

@@ -1,0 +1,31 @@
+React creates a Virtual DOM as manipulating the real DOM directly can be costly.
+So whenever there is a change React will create a Virtual DOM and compares it with another Virtual DOM(created earlier).
+Now React only updates the changes.
+This is the reason why React is fast as it plays with the VirtualDOM instead of Original DOM.
+
+This process of comparing the new Virtual DOM with the old VirtualDOM and then updating the real DOM
+is called Reconcillation and React uses a comparison algorithm called Diffing Algorithm.
+
+React Rendering Cycle :
+There are two processes in this.
+* Rendering and Commiting.
+
+In Rendering it has two types.
+1.Initial Render
+2.Re-render
+
+React components will be parsed and then JSX elements will be converted to React.createElement.
+VirtualDOM will be created and then passed to Commit phase.
+
+So now the comparison happens - Diffing and then React updates the realDOM using ReactDOM library.
+
+The Diffing Algorithm :
+1.Element nodes of Different Type.
+    React checks if both the element node types are of same or different.
+    If same it will check futher. If not it will add to the update list.
+
+2.Element with same type.
+    React checks if both the elment node types are same or different.
+    If same then it checks for the attribute. if the attributes differ then it will update only that attribute which is changed.
+
+Inaddition React will use the "key" attribute to match the element and update accordingly.

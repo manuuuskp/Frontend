@@ -1,0 +1,43 @@
+All the three elements - picture, audio and video elements are semantic elements.
+
+<picture></picture>
+The picture tag will be used to load images based on different media conditions.
+The main purpose is that it makes loading faster. Different type of images can  be loaded for Different
+media conditions.
+
+picture tag should have source tag where the mentioned images are given in the srcset attribute.
+It will also contain <img> tag for the purpose of fallback.
+
+<picture>
+    <source srcset="" media="(min-width:768px)" type="image/jpg"/>
+    <source srcset="" media="(min-width:1024px)" type="image/jpeg"/>
+    <source srcset="" media="(min-width:1200px)" type="image/avif"/>
+    <img src=""/>
+</picture>
+
+<video></video>
+The Video tag will be used to load video based on different media conditions.
+
+video tag will have "src" attribute or <source> tag where we can mention the different source conditions based on the media.
+
+<video controls height="200px" width="200px" loop src="">
+    <source srcset="" media="" type="video/mp4"></source>
+    <source srcset="" media="" type="video/webp"></source>
+</video>
+
+Video has many attributes.
+we can mention height, width.
+controls  - boolean attribute which displays the controls in the video.
+loop - boolean which plays the video in loop.
+autoplay - boolean which starts playing once it is loaded.
+preload="auto | meta" - to preload the whole video or only the meta details.
+
+<audio></audio>
+This is same as <video> element.
+We can also use audio file in video element but is not advisible.
+
+audio has same attributes as that of the <video> element.
+
+<audio src="" controls height="" width="" loop>
+    <source srcset="" media="" type=""></source>
+</audio>

@@ -1,0 +1,47 @@
+*,::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.commentMainContainer {
+    width: 90%;
+    margin: auto;
+}
+
+.mainComment {
+    background: aliceblue;
+    margin-top: 15px;
+    padding-inline: 20px;
+}
+
+button {
+    background: coral;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.addCommentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    width:250px;
+    gap: 1rem;
+}
+
+.subComment {
+    margin-left: 3rem;
+}
+
+.none {
+    display: none;
+}

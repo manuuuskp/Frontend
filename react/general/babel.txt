@@ -1,0 +1,10 @@
+what is babel ?
+Babel is a javascript compiler.
+
+It converts JS version > es6 into older js versions with backward compatible code so that the browser understands.
+It is also used to convert JSX into js.
+It is also used to polyfill missing features in the target environment.
+
+npm i @babel/preset-react
+
+This is used to convert JSX into JS.

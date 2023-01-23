@@ -1,0 +1,18 @@
+is setState synchronous or asynchronous ?
+
+Answer -
+
+Does setState returns any promises ?
+NO
+
+Does setState function argument is asynchronous ?
+NO
+
+Then the setState is synchronous.
+It looks like asynchronous because of the fact that it plays with the 
+previous state and that access to previous state is due to the
+closures.
+setState receives previous state from closures and updates the new state.
+
+setState sets the value to the component's instance and only on the rerender
+the component gets updated with the new state.

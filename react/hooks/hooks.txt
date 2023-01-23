@@ -1,0 +1,23 @@
+hooks are functions which will be used to perform some funtionalities.
+hooks were originally introduced to achieve certains things that are in Class Component.
+Later with the introduction of custom hooks we can have maintainability and can perform various actions
+in functional components.
+
+general rule of thumb is that hook name should start with "use".
+hooks can only be used inside functional component.
+Even inside the functional component hooks should be used at the top.
+
+General hooks :
+useState,
+useEffect,
+useContext,
+useReducer,
+useCallback,
+useMemo,
+useRef,
+useImperativeHandle,
+useLayoutEffect,
+useDebugValue,
+useDeferredValue,
+useTransition,
+useId

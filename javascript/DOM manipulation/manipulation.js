@@ -4,8 +4,8 @@ Node < --Element < --HTMLElement;
 // All DOM objects are Nodes and Element is a type of a Node which DOM API returns.
 // Node is an interface which Element inherits.
 
-// To check the node type there is a peroperty called "nodeType".
-// All elements will has will have nodeType as 1.
+// To check the node type there is a property called "nodeType".
+// All elements will have nodeType as 1.
 
 // DOM - CREATE AN ELEMENT :
 
@@ -80,6 +80,8 @@ element.insertAdjacentText(position, text);
 
 element.append(param1, param2, etc);
 // append method appends the elements after the last child of the target element.
+element.prepend(param1, param2, etc);
+//prepend the elements before the first child of the target element.
 Node.appendChild(child);
 // Append child method appends the child after the last child of the parent node.
 // appendChild will take only one child as argument.
@@ -90,7 +92,7 @@ Node.appendChild(child);
 
 // REMOVE THE HTML ELEMENT :
 
-element.remove(); //- removes the target element from the DOM.
+element.remove(); //- removes the target element and its descendants from the DOM.
 
 // ************************************************************************************************
 
