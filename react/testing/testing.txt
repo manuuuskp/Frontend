@@ -8,6 +8,15 @@ Unit Test - to test each individual block like each components and each function
 Integration Test - to test integration between the units.
 E2E - to test the whole of the application including real UI, real database, real server.
 
+example
+----------
+
+test("test name", () => {
+  render(<App />);
+  const elem = screen.getByText(/React App/);
+  expect(elem).toBeInTheDocument();
+})
+
 Filtering a Test
 ----------------------
 test.skip() - skips from getting tested
@@ -50,7 +59,7 @@ to run coverage - need to configure.
 Queries provided by RTL.
 
 getBy - get the element. throws error if the element node is not present.
-queryBy - gets the element. returns null if the element node is not preset.
+queryBy - gets the element. returns null if the element node is not present.
         This way we can check if the element is conditionally rendered.
 findBy - returns a promise which will be resolved after 1000ms by default.
 
@@ -97,6 +106,8 @@ it is better to use user-events.
 
 user.setup()
 user.click()
+user.dblClick()
+user.hover()
 user.type()
 user.tab()
 user.selectOptions()
@@ -172,4 +183,66 @@ await user.click(screen.getByRole("button, {name: "increment}))
 
 expect(increment).toHaveBeenCalled(1);
 
+Mocking API
+-------------
+npm i msw
+
+create a folder mock and file server.js inside it.
+
+go to msw site > geting started > node 
+
+create handler.js file
+import {rest} from msw;
+
+export const handlers = [
+  rest.get("url endpoint", (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json([
+        "json"
+      ])
+    )
+  })
+]
+
+Run the test
+---------------
+
+setup the test - setuptests.js
+copy from msw site > getting started > node > beforeBegin, AfterEach and AfterAll
+
+error handling - server.use()
+
+
+Custom Matchers
+-----------------
+
+Custom matchers
+toBeDisabled
+toBeEnabled
+toBeEmptyDOMElement
+toBeInTheDocument
+toBeInvalid
+toBeRequired
+toBeValid
+toBeVisible
+toContainElement
+toContainHTML
+toHaveAccessibleDescription
+toHaveAccessibleName
+toHaveAttribute
+toHaveClass
+toHaveFocus
+toHaveFormValues
+toHaveStyle
+toHaveTextContent
+toHaveValue
+toHaveDisplayValue
+toBeChecked
+toBePartiallyChecked
+toHaveErrorMessage
+Deprecated matchers
+toBeEmpty
+toBeInTheDOM
+toHaveDescription
 

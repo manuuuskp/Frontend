@@ -1,0 +1,122 @@
+What is a graphQL - graphQL is the configuration set around the HTTP to send and receive the data to and from the server.
+
+npm i @apollo/client graphql
+
+How to connect React with Apollo GraphQL ?
+-------------------------------------------
+
+in index.js file
+---------------------
+import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
+
+const client = new ApolloClient({
+    uri: "https://rickandmortyapi.com/graphql" //URL of the endpoint
+    cache: new InMemoryCache()
+})
+
+return (
+    <>
+        <ApolloProvider client={client}>
+            React App
+        </ApolloProvider>
+    </>
+)
+
+How to fetch Data from React component ?
+-----------------------------------------
+
+import { useQuery, gql } from "@apollo/client"
+
+const GET_CHARACTERS = gql`
+    query {
+        characters {
+            results {
+                id
+                name
+                image
+            }
+        }
+    }
+`
+
+function ComponentName() {
+    const { error, data, loading } = useQuery(GET_CHARACTERS);
+}
+
+How to send variables to fetch the query ?
+--------------------------------------------
+
+import { useQuery, gql } from "@apollo/client"
+
+const GET_CHARACTER = gql`
+    query getCharacter($id: ID!) {
+        character(id: $id) {
+            results {
+                id
+                name
+                image
+                episode {
+                    name
+                    episode
+                }
+            }
+        }
+    }
+`
+
+function ComponentName({id}) {
+    const { error, data, loading } = useQuery(GET_CHARACTER, {
+        variables: {
+            id: id
+        }
+    });
+}
+
+How to lazy query and call server on any event trigger ?
+----------------------------------------------------------
+
+import {gql, useLazyQuery} from "@apollo/client";
+
+const filterData = gql`
+    query getLocation($name: String!) {
+        characters(filter: {
+            name: $name
+        }) {
+            results {
+                location {
+                    name
+                }
+            }
+        }
+    }
+`
+
+const [getLocation, {data, loading, error}] = useLazyQuery(filterData, {
+    variables: {
+        name: name
+    }
+})
+
+how to alter the data (mutate) ?
+---------------------------------
+import { gql, useMutation } from "@apollo/client"
+
+const CREATE_PRODUCT = gql`
+mutation createProduct($name: String!, $quantity: Int!){
+    createProduct(record: {
+        name: $name,
+        quantity: $quantity
+    }) {
+        record {
+            name
+        }
+    }
+}
+'
+
+const [createProduct, {data, loading, error}] = useMutation(CREATE_PRODUCT, {
+    variables: {
+        name: "Rick",
+        quantity: 2
+    }
+});

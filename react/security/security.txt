@@ -1,0 +1,46 @@
+npm i flow-bin //check static types in js
+npm run flow init
+npm run flow
+
+-------------------
+
+OWASP - Open Web Application Security Project
+
+XSS - Cross Site Scripting
+When a malacious script is injected into a trusted site.
+
+For example - In form Input inject any HTML code so that our code reads it as actual HTML tag and injects it into the code.
+
+React by default prevents these kinda aa attacks yet we need to be extra careful on other things.
+
+CSRF - Cross Site Request Forgery
+
+When a malacious code is executed when a user is authenticated in a trusted website.
+
+how to prevent - 2 ways
+
+1.Checking headers to validate the request if it is from the same origin.Avoid CORS - Cross origin Request.
+2.Check for the Signed Token
+
+How do we do this ?
+1.using JWT web tokens
+2.Using cloud services like AuthO
+
+JSON Web Tokens:
+ Is usually used to securely transfer information between parties
+ Consists of three items - header, payload and Signature
+
+ header - 
+    has two parts
+    1.Type of header
+    2.hashing algorithm used
+
+ Payload - 
+    Payload consists of the data such as name, sub etc
+
+HOW TO CREATE OAUTH Token ?
+-----------------------------
+
+Go to OAuth Website and create a token.
+
+npm i @authO/authO-spa-js

@@ -1,0 +1,18 @@
+we can add lighthouse extension and click on audit to check it out.
+or
+we can go to web.dev/measure and enter our website and we can check it as well.
+
+We will have four major aspects to deal with.
+Performance,
+Accesibility,
+SEO,
+Best Practices
+
+Performace :
+    First Contentful paint
+    Speed index
+    Largest Contentful paint
+    Time to interactive
+    Total Blocking Time
+    Cumulative Layout Shift
+    

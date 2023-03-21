@@ -1,0 +1,31 @@
+Eslint is an open source Javascript Linting tool
+It is basically a certain type of static check for code that doesn't meet the style guides.
+
+Create .eslintrc.json
+
+{
+    "extends" : "airbnb",
+    "plugins" : [
+        "react",
+        "jsx-ally",
+        "import"
+    ],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules" : [
+        "react/jsx-props-no-spreading": "off"
+    ]
+}
+
+run --> npm info "eslint-config-airbnb@latest" peerDependencies
+
+npm i eslint-config-airbnb
+
+change settings.json
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "eslint.validate": ["javascript", "typescript"]
+
+npm run lint

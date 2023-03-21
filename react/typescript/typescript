@@ -1,0 +1,6 @@
+React.FC - React Functional Component
+React.ClassicComponent - React Class Component
+React.FormEvent - for Form Submission
+React.ChangeEvent, React.MouseEvent
+React.ReactNode
+React.CSSProperties

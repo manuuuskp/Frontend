@@ -1,0 +1,98 @@
+What is Storybook ?
+---------------------
+
+It is an isolated development environment and playground for UI components.
+We can create components independently.
+Showcase those components interactively.
+Ability to view different components that are already developed and also will be able to know
+what are the props need to be passed to it.
+
+how to setup ?
+----------------
+
+create-react-app //create a react project
+npx sb init //initiate the storybook
+
+folder structure
+-----------------
+
+Need three files - 
+component.css, 
+component.js, 
+component.stories.js
+
+component.js
+-------------
+
+import React from "react";
+
+const Button = (props) => {
+    const {variant= 'primary', children, ...rest} = props;
+
+    return <button className={`button ${variant}`} {...rest}>{children}</button>
+}
+
+export default Button
+
+component.stories.js
+---------------------
+
+import React from "react";
+import Button from "./Button";
+
+export default {
+    title: "Button",
+    component: Button
+}
+
+export const Primary = () => <Button variant="primary">Primary</Button>
+export const Secondary = () => <Button variant="secondary">Secondary</Button>
+
+How to make it under one folder
+--------------------------------
+
+export default {
+    title : FOLDERNAME/component name
+}
+
+Change the name of one of the variants in a Component Story
+-------------------------------------------------------------
+variantname.storyName = "New Updated Name";
+
+Sorting Story Name
+------------------
+Copy content from Storybook docs and paste it in Preview.js
+
+Using Args Template
+--------------------
+
+const Template = args => <Button {...args}></Button>
+
+export const PrimaryA = Template.bind({});
+
+PrimaryA.args = {
+    children: "PrimaryA",
+    variant: "primary"
+}
+
+or we can add like this
+
+export default {
+    args: {
+        children: "button"
+    }
+}
+
+Decorators
+-----------
+Decorators are components that wrap a story.
+
+export default {
+    decorators: [story => <Decorator>{story()}</Decorator>]
+}
+
+or we can add Global Decorator using preview.js
+
+import {addDecorator} from "@storybook/react";
+
+addDecorator(story => <center>{story()}</center>)

@@ -1,0 +1,15 @@
+Performance are generally measured using
+    First Contentful paint
+    First Meaningful paint
+    Time to Interactive
+    Max Potential First Input Delay
+
+
+Using HTTP/2 is far better than HTTP/1.1
+    HTTP/2 uses Multiplexing which means all the files will be downloaded parallelly and will be rendered.
+
+For using HTTP/2 - 
+    browser must support HTTP/2
+    server must support HTTP/2
+    connection must be secure using HTTPS
+    orelse connection will automatically be switched to HTTP/1.1
