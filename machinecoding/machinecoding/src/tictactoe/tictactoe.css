@@ -1,0 +1,131 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --cell-width: 100px;
+    --cell-height: 100px;
+}
+
+.board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cell__group {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: var(--cell-width);
+    height: var(--cell-height);
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:last-child {
+    border-bottom: none;
+}
+
+.cell.x::after,
+.cell.x::before {
+    content: '';
+    width: 20px;
+    height: calc(var(--cell-height) * .9);
+    background-color: #000;
+    position: absolute;
+}
+
+.cell.x::after {
+    transform: rotate(45deg);
+}
+
+.cell.x::before {
+    transform: rotate(-45deg);
+}
+
+.cell.circle::after,
+.cell.circle::before {
+    content: '';
+    position: absolute;
+}
+
+.cell.circle::after {
+    width: calc(var(--cell-height) * .6);
+    height: calc(var(--cell-height) * .6);
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.cell.circle::before {
+    width: calc(var(--cell-height) * .9);
+    height: calc(var(--cell-height) * .9);
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::before {
+    content: '';
+    position: absolute;
+}
+
+.board.circle .cell:not(.x):not(.circle):hover::after {
+    width: calc(var(--cell-height) * .6);
+    height: calc(var(--cell-height) * .6);
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.board.circle .cell:not(.x):not(.circle):hover::before {
+    width: calc(var(--cell-height) * .9);
+    height: calc(var(--cell-height) * .9);
+    background-color: #000;
+    opacity: 0.2;
+    border-radius: 50%;
+}
+
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before {
+    content: '';
+    width: 20px;
+    height: calc(var(--cell-height) * .9);
+    background-color: #000;
+    opacity: 0.2;
+    position: absolute;
+}
+
+.board.x .cell:not(.x):not(.circle):hover::after {
+    transform: rotate(45deg);
+}
+
+.board.x .cell:not(.x):not(.circle):hover::before {
+   transform: rotate(-45deg);
+}

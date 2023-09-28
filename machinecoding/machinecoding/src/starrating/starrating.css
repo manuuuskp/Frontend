@@ -1,0 +1,8 @@
+.star__rating::after {
+    content: '★';
+    font-size: 70px;
+}
+
+.star__rating.active {
+    color: rgb(247, 196, 9);
+}

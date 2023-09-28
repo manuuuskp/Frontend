@@ -1,0 +1,14 @@
+.file__container {
+    margin: 10px 15px;
+}
+
+.file__name {
+    cursor: pointer;
+}
+
+.content__container {
+    width: 300px;
+    background-color: '#ececec';
+    display: flex;
+    justify-content: space-between;
+}

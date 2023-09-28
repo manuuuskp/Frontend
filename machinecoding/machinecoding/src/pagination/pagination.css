@@ -1,0 +1,19 @@
+.pagination__button {
+    padding: 10px;
+    border: 1px solid #dfdddd;
+    cursor: pointer;
+}
+
+.pagination__button--active {
+    background-color: #e18e8e;
+}
+
+.pagination__container {
+    margin-top: 20px;
+}
+
+.pagination__userContainer {
+    margin: 10px;
+    border: 1px solid #dfdddd;
+    padding: 10px;
+}
