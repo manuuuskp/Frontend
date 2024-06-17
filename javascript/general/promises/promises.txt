@@ -1,0 +1,32 @@
+before the introduction of promises.
+
+callbacks were used.
+
+Callbacks are the reason for the asynchronous programming in JS.
+
+function addToCart(cart, placeOrder){
+    function placeOrder(showOrderSummary) {
+        function showOrderSummary() {
+
+        }
+    }
+}
+
+This creates 2 problems.
+1.Pyramid of Doom
+2.Inversion of control - we lose control of our code.
+
+So Promises were introduced.
+
+promise is an object that states the eventual completion or rejection of an aynchronous operation.
+
+new Promise((resolve, reject) => {
+    if(true){
+        resolve("resolved")
+    } else {
+        const err = new Error("this is how you will create an error");
+        reject(err);
+    }
+}).then(res => {
+    console.log("you ll get the response of the previous promise")
+})

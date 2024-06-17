@@ -1,0 +1,97 @@
+Chirag
+===========
+TypeAhead/Autocomplete
+Google like day calendar
+Google sheet / excel
+Render a form dynamic
+Progress bar
+Star Widget
+Twitter post like text area
+Todo application
+Design Cart Page
+Product Listing page with Filters
+Tic-tac-toe
+Bookmyshow
+Server driven UI
+===================
+Image Carousel
+Dropdown Menu
+Modal Dialog
+News Feed
+E-commerce Marketplace
+Pinterest
+Chat Application - Whatsapp
+Codesandbox
+Spotify
+Netflix
+Snake and Ladder
+Whiteboard
+
+==============
+
+
+1. How will you design a ticket booking system like BookmyShow?
+
+Check out this → https://youtu.be/lBAwJgoO3Ek
+
+2. How will you create a file-sharing system like Google Drive/ Dropbox?
+
+Check out this → https://youtu.be/U0xTu6E2CT8
+
+3. How will you design a Hotel booking application like AirBnB?
+
+Check out this →  https://youtu.be/YyOXt2MEkv4
+
+4. How will you design a Stack Overflow clone?
+
+Check out this → https://youtu.be/k4xr-UHfWtM
+
+5. How will you design a URL shortener like bit(dot)ly or goo(dot)gl?
+
+Check out this → https://designgurus.org/link/84Y9hP?url=https%3A%2F%2Fdesigngurus.org%2Fblog%2Furl-shortening
+
+6. How will you design a Vending Machine in Java?
+
+Check out this → https://youtu.be/D0kDMUgo27c
+
+7. How will you design a taxi app like Uber or Ola?
+
+Check out this → https://youtu.be/Tp8kpMe-ZKw
+
+8. How will you design a Portfolio Manager for traders?
+
+Check out this → https://javarevisited.blogspot.com/2022/03/how-to-design-trade-position-calculator.html
+
+
+9. How will you design a BlackJack Card Game?
+
+Check out this → https://youtu.be/1pzcn3uNC6U
+
+10. How will you design a board game like chess?
+
+Check out this → https://www.youtube.com/watch?v=RVHNcng0oF0
+
+
+11. What are the different Consistency patterns in system design?
+
+Consistency from the CAP theorem states that every read request should get the most recently written data. When there are multiple data copies available, a problem arises of synchronizing them so that the clients get fresh data consistently. Following are the consistency patterns available:
+
+Weak consistency: 
+After a data write, the read request may or may not be able to get the new data. This type of consistency works well in real-time use cases like VoIP, video chat, real-time multiplayer games, etc. For example, when we are on a phone call, if we lose network for a few seconds, then we lose information about what was spoken during that time.
+
+Eventual consistency: 
+After the data is written, the readers will eventually see the latest data within milliseconds. Here, the data is replicated asynchronously. These are seen in DNS and email systems. This works well in highly available systems.
+
+Strong consistency: 
+After a data write, the subsequent reads will see the latest data. Here, the data is replicated synchronously. This is seen in RDBMS and file systems and are suitable in systems requiring data transactions.
+
+12. How will you design an ATM?
+
+Check out this → https://youtu.be/JH7gcXeR3ds
+
+Note: I have collected these answers from various resources on the internet
+
+13. How will you design an autocomplete feature?
+
+Check out this → https://youtu.be/us0qySiUsGU
+

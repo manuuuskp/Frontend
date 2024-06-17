@@ -1,0 +1,26 @@
+Employee Database - RSC
+Countdown Timer - RSC
+File Explorer - RSC - REACT_DONE
+Search with Pagination - RSC
+EMI Calculator - RSC
+Password Generator - RSC
+Progress Bar - RSC
+Grid Lights - RSC
+Todo List - RSC
+Infinite Scroll - SP
+AutoComplete_online / offline - SP
+Accordion - SP - REACT_DONE
+OTP - SP
+Star Rating - SP - REACT_DONE
+Stopwatch - SP - VANILLA_DONE | REACT_DONE
+Tic Tac Toe - SP - REACT_DONE
+25-5-clock - SP
+Password Strength - SP
+Toast Popup - SP
+Carousal - SP - JS
+Comment box - SP
+Dialog - SP
+Sidebar with hamburger menu
+Select Dropdown
+Temperature Convertor
+Trello Board

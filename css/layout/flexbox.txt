@@ -1,0 +1,22 @@
+Flexbox was designed for layout in one dimension. Either Row or Column.
+
+display: flex;
+flex-direction: row | column | row-reverse | column-reverse (default is row)
+justify-content: center | space-between | space-around | flex-start | flex-end | space-evenly
+align-items: center | flex-start | flex-end | stretch
+flex-wrap: wrap | nowrap | wrap-reverse (default is no-wrap)
+align-content: center | flex-start | flex-end | space-between | space-around | space-evenly
+gap: row-gap | column-gap
+
+
+justify-content: one which aligns across the main axis
+align-items: one which aligns across the perpendicular to the main axis
+flex-wrap: wraps the flex items to the next line if overflows
+
+for Flex items:
+    order - order in which the items should be displayed
+    flex-grow - the rate in which the item should fill the remaining space
+    flex-shrink - the rate in which the item should wrap
+    flex-basis - the base width of the item.
+    flex: flex-grow | flex-shrink | flex-basis
+    align-self: flex-start | flex-end | center | baseline | stretch

@@ -1,0 +1,30 @@
+BrowserRouter - that holds the url in the search bar of the browser and syncs in line with the browsers
+history object.
+can have the "baseName" param.
+
+<BrowserRouter basename="app">
+    <AppState>{newReactElem}</AppState>
+</BrowserRouter>
+
+
+Routes:
+    <Routes>
+      <Route path="index" element={<Index />}></Route>
+      <Route path="index2" element={<Index2 />}></Route>
+    </Routes>
+
+Route can have more params:
+    path
+    element
+    Component - need to pass the reference, it will create the element
+    loader - using the params we can go with the async call
+        useLoaderData() - can be used in the component to get the loaded data using loader
+    action - When submitting the data in that route, this can be triggered
+    errorElement - Error during the loader or action call be taken care using this errorElement
+
+hooks:
+    useParams()
+    useNavigate()
+    useLoaderData()
+    useLocation()
+    useBeforeUnload()

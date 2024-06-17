@@ -1,0 +1,29 @@
+CSRF is a web vulnerability where the authorised user or the privileged user is manipulated to trigger an action that could potentially
+lead to data deletion, remove authorisation etc.
+Unlike XSS the attacker will not be injecting any kind of script but manipulates the user.
+
+HOW DOES THIS HAPPEN ?
+the attacker will be sending attractive links and when the user clicks the link which has potential link to change the authority of the application
+gets executed.
+Example - if the the user is logged into the application, then session will be maintained in the cookie.
+and that will b sent on each request to avoid reauthentication.
+Attacker makes use of this loophole of the server, that the request from the client with that cookie is meant to be authentic and performs that action.
+
+This can also happen on the POST call as well.
+Attacker sends a form that when filled and when submitted will target our application url that could potentially delete something.
+
+How do we prevent it ?
+
+1.using token for CSRF
+2.using double submit cookie
+3.using custom header
+
+1.using token for CSRF - Server returns a unique token as a response and the client should return that token on next request which the server then confirms
+and then returns the data along with the new token.
+
+2.using double submit cookie - client should send the unique token along with the cookie and along with the request headers.
+by this means, the server will check if the token in the cookie and the request header are the same. if not rejects the request.
+
+3.using custom header - this avoids having the token. This uses the custom header which should be sent from the client.
+the server checks if the custom header is present or not. if the required custom header is not present then the server thinks that is not a valid request
+and rejects it.This is based on the Single Origin Policy where the token can only be sent in the same origin and using the javascript.

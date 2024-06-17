@@ -11,8 +11,14 @@ aria-labelledby - "id",
 aria-current,
 arai-hidden,
 aria-describedby,
+aria-expanded,
+aria-collapsed,
+aria-required,
+aria-disabled,
+aria-live - 'polite' | 'assertive',
 role,
 tabindex,
+landmark roles - navigation, banner, main, footer
 
 Use Outline for the components that are focussed.
 usually on focussing it will be thin by default.

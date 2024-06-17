@@ -1,0 +1,24 @@
+export default () => {
+  self.addEventListener("message", (e) => {
+    if (!e) return;
+    let usersData;
+    const { users, type } = e.data;
+
+    if (type === "asc") {
+      usersData = users.sort((a, b) => a.commentCount - b.commentCount);
+    } else {
+      usersData = users.sort((a, b) => b.commentCount - a.commentCount);
+    }
+
+    postMessage(usersData);
+  });
+};
+
+class WorkerConst {
+  constructor(worker) {
+    const code = worker.toString();
+    const blob = new Blob([`(${code})()`]);
+    console.log(URL.createObjectURL(blob));
+    return new Worker(URL.createObjectURL(blob));
+  }
+}

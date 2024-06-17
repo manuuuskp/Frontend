@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xss Attack</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      document.cookie = "token=abcdefghijklmn";
+    </script>
+    <script>
+      const urlParam = new URLSearchParams(location.search);
+      const name = urlParam.get("name");
+      document.getElementById("app").innerHTML = name;
+    </script>
+  </body>
+</html>
+
+<!-- This is the simplest XSS attack. 
+
+Ways to Mitigate. 
+* Sanitize the DOM 
+* use TextContent to append to the DOM 
+* use libraries like DOMPurify to Sanitize 
+* use modern libraries will automatically takes care of the sanitisation.
+* using content security policy -->
+
+<!-- app.listen((req, res) => { 
+res.setHeader('Content-Security-Policy', "default-src
+'self'; script-src 'self' 'https://anyurl.com'") 
+}) -->

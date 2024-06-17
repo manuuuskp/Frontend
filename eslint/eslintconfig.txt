@@ -1,0 +1,64 @@
+ESLint is a tool for identifying and reporting the patterns found in the javascript.
+--------------------------------------------------------------------------------------
+
+npx install-peerdeps --dev eslint-config-airbnb
+
+in package.json
+-----------------
+
+"lint": "./node_modules/.bin/eslint"
+
+in .eslint.js
+---------------
+
+module.exports = {
+    extends: "airbnb"
+}
+
+=====================================================
+=====================================================
+=====================================================
+
+npm i eslint-config-prettier // to avoid conflicts of prettier with eslint. prettier will be given first priority
+
+=====================================================
+=====================================================
+=====================================================
+
+in general
+
+module.exports = {
+    parser: "@typescript-eslint/parser" //parser is used to convert the js code into abstract syntax tree for ESlint to evaluate.
+    parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: "module",
+        project: ["./tsconfig.json"]
+    },
+    rules: [
+        'jsx-a11y/anchor-is-valid': [
+            'error',
+            {
+                components: ['Link'],
+                specialLink: ['hrefLeft']
+            }
+        ]
+    ]
+}
+
+
+
+npx i-peerdeps --dev eslint-config-airbnb
+npx install-peerdeps --dev eslint-config-airbnb
+npx install -peerdeps --dev eslint-config-airbnb
+npx install-peerdeps --dev eslint-config-airbnb
+npx install-peerdeps --dev eslint-config-airbnb
+
+module.exports = {
+    "extends": "airbnb",
+    "parser": "@typescript-eslint/parser"
+    "parserOptions": {
+        ecmaVersion: "2020",
+        sourceType: "module",
+        project: ["./tsconfig.json"]
+    }
+}

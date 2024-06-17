@@ -1,0 +1,26 @@
+Attacker injects the malacious code into our application and stealing the data.
+
+three types:
+    Stored XSS attack
+    Reflect XSS attack
+    DOM XSS attack
+
+    Stored XSS - chat application - send <b>welcome</> if it becomes bold then we can pass in the <script>Malacious</script>.
+    Chat is also stored in the database and those who access the chat in the system will get affect.
+
+    Reflect XSS - search comething. it is passed as query in URL. and pass <b>welcome</> if it becomes bold in the screen then
+    pass <script>Malacious</script> to make the application prone to the attack.
+
+    DOM XSS - anything related to the DOM injection. it can be reflected XSS as well. then executing the script making application prone to 
+    the attack.
+
+    Prevention:
+    1.Sanitise the string - all modern js framework uses this. String is not handled as innerHTML. if we want we can use
+    'dangerouslySetInnerHTML'
+
+    2.use safe sink - instead of injecting string as innerHTML we can createTextNode and append it. document.createTextNode()
+
+    3.use library like - DOMPurify() to sanitise the HTML.
+
+    4.set the Content Security Policy and make aware which script are acceptable.
+

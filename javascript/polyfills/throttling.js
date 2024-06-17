@@ -5,11 +5,11 @@ const throttling = function (fn, delay) {
   let canCall = true;
   return function (...args) {
     if (canCall) {
-      fn.apply(this, args);
       canCall = false;
       setTimeout(() => {
         canCall = true;
       }, delay);
+      return fn.apply(this, args);
     }
   };
 };

@@ -22,6 +22,8 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  devtool: "inline-source-map",
+  devtool: "source-map" //Production code
   devServer: {
     static: "./dist",
   },
@@ -73,8 +75,81 @@ module.exports = {
     
   ],
   optimization: {
+    moduleIds: 'deterministic',
+    runtimeChunk: 'single',
     splitChunks: {
       chunks: "all",
+      cacheGroups: {
+         vendor: {
+           test: /[\\/]node_modules[\\/]/,
+           name: 'vendors',
+           chunks: 'all',
+         },
+       },
     },
   },
 };
+
+
+CODE SPLITTING:
+==================
+MiniCssExtractPlugin - is used to extract css into seperate files. It creates CSS file per JS file which contains CSS in it.
+
+optimization: {
+  splitChunks: {
+    chunks: all
+  }
+}
+This is to split the common modules into separate chunks.
+
+===========================
+we can also prefetch and preload modules when importing.
+
+import(/* webpackPrefetch: true webpackChunkName: 'chunkName' */ "../somepath/somefile");
+
+This would have created -- <link rel="prefetch" href="login-modal-chunk.js">
+
+This is how you preLoad.
+import(/* webpackPreload: true */ 'ChartingLibrary');
+
+CASHING:
+============
+can be done using content hash in the output object by substitution string
+
+output: {
+  filename: [name].[contenthash].bundle.js
+}
+
+we can also use the optimization object.
+
+optimization: {
+  runtimeChunk: 'single',
+  splitChunks: {
+    cacheGroup: {
+      vendor: {
+        test: ,
+        name: 'vendor',
+        chunks: 'all'
+      }
+    }
+  }
+}
+
+TREE SHAKING:
+==================
+use ES6 module - import and export
+use "sideeffects": false in package.json to tell compiler that is it side effect free and unsed import can be removed
+set mode - production which gives us tree shaking and minification
+
+
+PRODUCTION:
+================
+setting mode: production will do all the things in webpack.
+It does minification by TerserPlugin.
+
+use - css-minimizer-webpack-plugin. to minimize the bundle size of css in production.
+optimization: {
+  minimizer: [
+    new CssMinimizerPlugin()
+  ]
+}

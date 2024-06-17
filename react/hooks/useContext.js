@@ -25,3 +25,11 @@ const Childtwo = () => {
 };
 
 export default Childtwo;
+
+
+// 1.Context will not work if you provide and useContext in the same level of component.
+// for a context should work there should be some provider in the parent level and not in the same level.
+// 2.If there are no providers in the parent level then default provider value will be taken from the place where
+// React.createContext(default value) is used.
+
+// important - Context is not a state. it just teleports data to its children no matter how deep it is.

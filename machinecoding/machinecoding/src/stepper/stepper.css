@@ -1,0 +1,35 @@
+.step__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step__container {
+  position: relative;
+}
+
+.step__item {
+  border: 1px solid #333;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(195, 195, 195);
+  transition: all 2ms;
+  cursor: pointer;
+}
+
+.step__item.active {
+  background-color: rgb(8, 160, 255);
+}
+
+.step__connector {
+  width: 100%;
+  top: 50%;
+  position: absolute;
+  height: 2px;
+  background-color: rgb(195, 195, 195);
+  transition: all 2ms;
+  z-index: -1;
+}

@@ -22,3 +22,13 @@ Function.prototype.customBind = function (thisObj) {
     return thisObj.fnRef(...args);
   };
 };
+
+Function.prototype.myBind = function(...args){
+  let func = this;
+  let thisObj = args[0];
+  let otherArgs = Array.prototype.slice.call(args, 1);
+
+  return function(...args2) {
+    return func.apply(thisObj, [...otherArgs, ...args2]);
+  }
+}

@@ -1,0 +1,2 @@
+Content Security Policy allows the website administors to control which resources the user-agent is allowed to load the page.
+This help gaurd against the XSS attack.

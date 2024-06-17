@@ -5,10 +5,11 @@ const person = {
 
 const personProxy = new Proxy(person, {
     get: (obj, props) => {
-
+        console.log(`the value is ${obj[props]}`);
     },
     set: (obj, props, value) => {
-
+        console.log(`The old value is ${obj[props]} and the new value is ${value}`);
+        return Reflect.set(obj, props, value);
     }
 });
 

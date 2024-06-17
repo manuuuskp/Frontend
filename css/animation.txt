@@ -1,0 +1,12 @@
+transform: translate | scale | skew | rotate
+
+transform: translate(x, y)
+transform: rotate(20deg)
+transform: scale(x, y)
+transform: skew(x deg, y deg)
+
+
+transition: transition-property transition-duration transition-timing-function transition-delay;
+
+
+animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction;

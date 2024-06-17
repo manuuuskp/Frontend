@@ -1,0 +1,29 @@
+What is CORS ?
+
+Cross Origin Resource Sharing.
+
+What is that ?
+
+Basically Our Browser will act as a gate keeper and will check with the server in the preflight if the server accepts that particular API
+request.
+if not browser will not send the request stating that CORS is not enabled.
+
+We can configure in server side.
+
+- access-control-allow-origin
+- access-control-allow-methods
+- access-control-allow-headers
+- access-control-allow-credentials
+
+npm i cors
+
+cors({
+    ...options
+})
+
+const options = {
+    origin: 'https://abc.com',
+    methods: ['GET', 'POST']
+}
+
+we can byepass CORS issue in FE using chrome extension.

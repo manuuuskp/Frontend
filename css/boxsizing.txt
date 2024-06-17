@@ -1,0 +1,6 @@
+box-sizing: content-box | border-box | padding-box //default is content-box
+
+if we set the width of 100px to an element then by default only the width of the content will be 100px.
+inaddition there will be padding and border which will make the calculation bit tough.
+
+box-sizing: border-box  - this makes the width of the content to include content, padding, border.
